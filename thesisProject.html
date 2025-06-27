@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"></a>
+				<nav>
+					<ul>
+						<li><a href="index.html">BACK TO HOME</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<!-- Main -->
+<section id="main" class="wrapper">
+  <div class="inner">
+    <h1 class="major">Thesis Project</h1>
+
+    <!-- Gallery Container -->
+    <div id="galleryWrapper"
+         style="position: relative; text-align: center; max-width: 100%; margin-bottom: 2rem;"
+         onmouseover="toggleArrows(true)"
+         onmouseout="toggleArrows(false)">
+
+      <!-- Prev Button -->
+      <button id="prevBtn"
+              onclick="changeSlide(-1)"
+              style="display: none; cursor: pointer; position: absolute; top: 50%; left: 0; padding: 12px; color: white; font-weight: bold; font-size: 24px; border: none; background-color: rgba(0,0,0,0.5); transform: translateY(-50%);">
+        &#10094;
+      </button>
+
+      <!-- Main Image -->
+      <img id="galleryImage"
+           src="images/thesisProjectPic01.jpg"
+           alt="Gallery Image"
+           style="width: 100%; height: auto; border-radius: 10px;" />
+
+      <!-- Next Button -->
+      <button id="nextBtn"
+              onclick="changeSlide(1)"
+              style="display: none; cursor: pointer; position: absolute; top: 50%; right: 0; padding: 12px; color: white; font-weight: bold; font-size: 24px; border: none; background-color: rgba(0,0,0,0.5); transform: translateY(-50%);">
+        &#10095;
+      </button>
+    </div>
+
+    <p><strong>Title:</strong> Profanity and Sentiment Detection in Filipino Social Media Comments Using Transformer-Based NLP Models</p>
+    <p><strong>Tools Used:</strong> Python (Scikit-learn, Pandas), Excel, HTML, CSS, JavaScript</p>
+
+    <h2 class="major">Project Overview</h2>
+    <p>This project focuses on detecting profanity in Filipino social media comments using transformer-based models. It integrates tools like Python and web technologies to analyze and present the results.</p>
+
+    <h2 class="major">Steps I Followed</h2>
+    <ol>
+      <li>
+        <strong>Data Gathering:</strong> I collected a dataset of Filipino social media comments, including both profane and non-profane examples. This served as the foundation for training the model.
+      </li><br>
+      <li>
+        <strong>Data Cleaning:</strong> I removed unnecessary characters, corrected spelling, and standardized the format. Comments were labeled with profanity severity (non-profane, mild, moderate, high).
+      </li><br>
+      <li>
+        <strong>Data Modeling:</strong> I used transformer models like BERT and XLNet to classify comments and fine-tuned model architecture to optimize performance.
+      </li><br>
+      <li>
+        <strong>Training and Testing:</strong> I trained the model and evaluated it using accuracy, precision, recall, and F1-score.
+      </li><br>
+      <li>
+        <strong>Deployment via Flask:</strong> The final model was deployed as a web application using Flask, allowing real-time detection of profanity in user input.
+      </li>
+    </ol>
+
+    <!-- Inline JavaScript -->
+    <script>
+      var images = [
+        "images/thesisProjectPic01.jpg",
+        "images/thesisProjectPic02.jpg",
+        "images/thesisProjectPic03.jpg"
+      ];
+      var currentImageIndex = 0;
+
+      function changeSlide(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+        if (currentImageIndex >= images.length) currentImageIndex = 0;
+        document.getElementById("galleryImage").src = images[currentImageIndex];
+      }
+
+      function toggleArrows(show) {
+        document.getElementById("prevBtn").style.display = show ? "block" : "none";
+        document.getElementById("nextBtn").style.display = show ? "block" : "none";
+      }
+    </script>
+
+  </div>
+</section>
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

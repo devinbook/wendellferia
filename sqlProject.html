@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>SQL Projects</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .accordion {
+      background-color: #5e4b8b;
+      color: white;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      transition: background-color 0.3s;
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .accordion:hover,
+    .accordion.active {
+      background-color: #7a5cc9;
+    }
+
+    .accordion .arrow {
+      transition: transform 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .accordion.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    .panel {
+      padding: 0 1rem 1rem;
+      display: none;
+      background-color: #4a387e;
+      overflow: hidden;
+      color: white;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .panel p,
+    .panel ol {
+      color: #ddd;
+    }
+
+    .panel code {
+      display: block;
+      background: #2f264d;
+      padding: 10px;
+      color: #fff;
+      margin-top: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    @media (max-width: 600px) {
+      .accordion {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+      }
+
+      .panel {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="title"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Back to Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <section id="main" class="wrapper">
+      <!-- Inside your SQL Projects HTML, replace this inside <div class="inner"> -->
+<div class="inner">
+
+  <!-- Section Title -->
+  <h1 class="major" style="border-bottom: 2px solid #aaa; padding-bottom: 0.5rem; margin-bottom: 2rem;">
+    SQL Projects
+  </h1>
+
+  <!-- Accordion Panels -->
+  <button class="accordion">
+    DATA CAMP
+    <span class="arrow">&#9660;</span>
+  </button>
+  <div class="panel">
+    <p>This project analyzes user engagement and drop-off rates across different steps of a product funnel using SQL aggregation and filtering.</p>
+  </div>
+
+  <button class="accordion">
+    DATA CAMP
+    <span class="arrow">&#9660;</span>
+  </button>
+  <div class="panel">
+    <p>Analyzed retention and churn patterns of users over a 30-day period using SQL window functions and CASE statements.</p>
+  </div>
+
+  <button class="accordion">
+    DATA CAMP
+    <span class="arrow">&#9660;</span>
+  </button>
+  <div class="panel">
+    <p><strong>CoolTShirts</strong>, an innovative apparel shop, is running a bunch of marketing campaigns. In this project, we'll be helping them answer these questions about their campaigns:</p>
+    <ol>
+      <li>How many campaigns and sources does CoolTShirts use and how are they related?</li>
+      <li>What pages are on their website?</li>
+      <li>How many first touches is each campaign responsible for?</li>
+      <li>How many last touches is each campaign responsible for?</li>
+      <li>How many last touches on the purchase page is each campaign responsible for?</li>
+      <li>CoolTShirts can re-invest in 5 campaigns. Which should they pick and why?</li>
+    </ol>
+    <p>Let's run these queries:</p>
+    <code>SELECT COUNT(DISTINCT utm_campaign) FROM page_visits;</code>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="wrapper alt">
+    <div class="inner">
+      <ul class="menu">
+        <li>&copy; Untitled. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        const arrow = this.querySelector(".arrow");
+
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+
+        if (arrow) {
+          arrow.classList.toggle("rotate");
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
